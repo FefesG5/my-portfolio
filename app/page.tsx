@@ -45,7 +45,7 @@ export default function Home() {
       <Projects />
       <Experience />
       <Contact />
-      <Footer/>
+      <Footer />
     </main>
   )
 }
