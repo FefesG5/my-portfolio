@@ -1,9 +1,44 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("hero")
+
+  useEffect(() => {
+    const sections = [
+      "hero",
+      "about",
+      "skills",
+      "projects",
+      "experience",
+      "contact",
+    ]
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.5 }
+    )
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  const linkClass = (section: string) =>
+    section === activeSection
+      ? "text-gray-900 font-medium transition-colors"
+      : "text-gray-400 hover:text-gray-900 transition-colors"
 
   return (
     <nav className="fixed top-0 w-full bg-white border-b border-gray-100 z-50">
@@ -11,20 +46,23 @@ export default function Navbar() {
         <span className="font-bold text-gray-900">Gee Chai</span>
 
         {/* Desktop links */}
-        <div className="hidden md:flex gap-6 text-sm text-gray-500">
-          <a href="#hero" className="hover:text-gray-900 transition-colors">
+        <div className="hidden md:flex gap-6 text-sm">
+          <a href="#hero" className={linkClass("hero")}>
             Home
           </a>
-          <a href="#about" className="hover:text-gray-900 transition-colors">
+          <a href="#about" className={linkClass("about")}>
             About
           </a>
-          <a href="#skills" className="hover:text-gray-900 transition-colors">
+          <a href="#skills" className={linkClass("skills")}>
             Skills
           </a>
-          <a href="#projects" className="hover:text-gray-900 transition-colors">
+          <a href="#projects" className={linkClass("projects")}>
             Projects
           </a>
-          <a href="#contact" className="hover:text-gray-900 transition-colors">
+          <a href="#experience" className={linkClass("experience")}>
+            Experience
+          </a>
+          <a href="#contact" className={linkClass("contact")}>
             Contact
           </a>
         </div>
@@ -40,38 +78,45 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col px-6 pb-4 gap-4 text-sm text-gray-500">
+        <div className="md:hidden flex flex-col px-6 pb-4 gap-4 text-sm">
           <a
             href="#hero"
-            className="hover:text-gray-900 transition-colors"
+            className={linkClass("hero")}
             onClick={() => setIsOpen(false)}
           >
             Home
           </a>
           <a
             href="#about"
-            className="hover:text-gray-900 transition-colors"
+            className={linkClass("about")}
             onClick={() => setIsOpen(false)}
           >
             About
           </a>
           <a
             href="#skills"
-            className="hover:text-gray-900 transition-colors"
+            className={linkClass("skills")}
             onClick={() => setIsOpen(false)}
           >
             Skills
           </a>
           <a
             href="#projects"
-            className="hover:text-gray-900 transition-colors"
+            className={linkClass("projects")}
             onClick={() => setIsOpen(false)}
           >
             Projects
           </a>
           <a
+            href="#experience"
+            className={linkClass("experience")}
+            onClick={() => setIsOpen(false)}
+          >
+            Experience
+          </a>
+          <a
             href="#contact"
-            className="hover:text-gray-900 transition-colors"
+            className={linkClass("contact")}
             onClick={() => setIsOpen(false)}
           >
             Contact
