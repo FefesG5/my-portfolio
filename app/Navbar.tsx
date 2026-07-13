@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import ThemeToggle from "./ThemeToggle"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -43,7 +44,10 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full bg-white border-b border-gray-100 z-50">
       <div className="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
-        <span className="font-bold text-gray-900">Gee Chai</span>
+        <div className="flex items-center gap-4">
+          <span className="font-bold text-gray-900">Gee Chai</span>
+          <ThemeToggle />
+        </div>
 
         {/* Desktop links */}
         <div className="hidden md:flex gap-6 text-sm">
