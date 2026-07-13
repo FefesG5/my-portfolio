@@ -12,15 +12,19 @@ export default function Home() {
       <Navbar />
       <section
         id="hero"
-        className="min-h-screen flex items-center justify-center bg-white pt-16"
+        className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 pt-16"
       >
         <div className="text-center px-6">
-          <p className="text-gray-400 text-sm uppercase tracking-widest mb-4">
+          <p className="text-gray-400 dark:text-gray-500 text-sm uppercase tracking-widest mb-4">
             Welcome to my portfolio
           </p>
-          <h1 className="text-6xl font-bold text-gray-900 mb-4">Gee Chai</h1>
-          <h2 className="text-2xl text-gray-400 mb-6">Frontend Developer</h2>
-          <p className="text-lg text-gray-600 max-w-xl mx-auto mb-10">
+          <h1 className="text-6xl font-bold text-gray-900 dark:text-white mb-4">
+            Gee Chai
+          </h1>
+          <h2 className="text-2xl text-gray-400 dark:text-gray-500 mb-6">
+            Frontend Developer
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-10">
             I build modern responsive web applications with Next.js, TypeScript,
             and Tailwind.
           </p>
