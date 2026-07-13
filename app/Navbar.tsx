@@ -38,14 +38,16 @@ export default function Navbar() {
 
   const linkClass = (section: string) =>
     section === activeSection
-      ? "text-gray-900 font-medium transition-colors"
-      : "text-gray-400 hover:text-gray-900 transition-colors"
+      ? "text-gray-900 dark:text-white font-medium transition-colors"
+      : "text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
 
   return (
-    <nav className="fixed top-0 w-full bg-white border-b border-gray-100 z-50">
+    <nav className="fixed top-0 w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 z-50">
       <div className="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <span className="font-bold text-gray-900">Gee Chai</span>
+          <span className="font-bold text-gray-900 dark:text-white">
+            Gee Chai
+          </span>
           <ThemeToggle />
         </div>
 
@@ -73,7 +75,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger button */}
         <button
-          className="md:hidden text-gray-500"
+          className="md:hidden text-gray-500 dark:text-gray-400"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
