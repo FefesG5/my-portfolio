@@ -13,24 +13,30 @@ const experience = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-white">
+    <section id="experience" className="py-24 bg-white dark:bg-gray-900">
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Experience</h2>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          Experience
+        </h2>
         <div className="flex flex-col gap-10">
           {experience.map((job) => (
             <div key={job.title}>
               <div className="flex justify-between items-start mb-2">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {job.title}
                   </h3>
-                  <p className="text-gray-500">{job.company}</p>
+                  <p className="text-gray-500 dark:text-gray-400">
+                    {job.company}
+                  </p>
                 </div>
-                <span className="text-sm text-gray-400">{job.date}</span>
+                <span className="text-sm text-gray-400 dark:text-gray-500">
+                  {job.date}
+                </span>
               </div>
               <ul className="list-disc list-inside flex flex-col gap-1">
                 {job.bullets.map((bullet) => (
-                  <li key={bullet} className="text-gray-600">
+                  <li key={bullet} className="text-gray-600 dark:text-gray-300">
                     {bullet}
                   </li>
                 ))}
