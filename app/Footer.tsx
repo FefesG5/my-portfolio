@@ -1,8 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="py-8 bg-gray-900">
+    <footer className="py-8 bg-gray-900 dark:bg-gray-950">
       <div className="max-w-3xl mx-auto px-6 flex justify-between items-center">
-        <span className="text-gray-400 text-sm">© 2026 Gee Chai</span>
+        <span className="text-gray-400 dark:text-gray-500 text-sm">
+          © 2026 Gee Chai
+        </span>
         <div className="flex gap-6 text-sm text-gray-400">
           <a
             href="https://github.com"
