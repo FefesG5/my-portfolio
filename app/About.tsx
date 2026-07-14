@@ -1,9 +1,11 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-gray-50">
+    <section id="about" className="py-24 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">About Me</h2>
-        <div className="flex flex-col gap-4 text-gray-600 text-lg leading-relaxed">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          About Me
+        </h2>
+        <div className="flex flex-col gap-4 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
           <p>
             Hi, I'm Gee Chai — a Frontend Developer based in Japan passionate
             about building clean, fast, and user-friendly web applications.
