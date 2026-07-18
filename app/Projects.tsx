@@ -4,7 +4,7 @@ const projects = [
     description:
       "A personal portfolio built with Next.js, TypeScript and Tailwind CSS.",
     tech: ["Next.js", "TypeScript", "Tailwind"],
-    link: "#",
+    link: "https://github.com/FefesG5/my-portfolio",
   },
   {
     title: "Project Two",
@@ -25,7 +25,7 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-xl p-6 hover:shadow-md transition-shadow cursor-pointer"
+              className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-xl p-6 hover:shadow-md transition-shadow"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 {project.title}
@@ -33,7 +33,7 @@ export default function Projects() {
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((t) => (
                   <span
                     key={t}
@@ -43,6 +43,16 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+              {project.link !== "#" && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >
+                  View on GitHub →
+                </a>
+              )}
             </div>
           ))}
         </div>
