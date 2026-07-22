@@ -75,7 +75,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger button */}
         <button
-          className="md:hidden text-gray-500 dark:text-gray-400"
+          className="md:hidden text-gray-500 dark:text-gray-200"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
