@@ -37,7 +37,7 @@ export default function Home() {
             </a>
             <a
               href="#contact"
-              className="border border-gray-200 text-gray-600 px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+              className="border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             >
               Contact Me
             </a>
