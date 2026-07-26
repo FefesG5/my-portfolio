@@ -5,6 +5,7 @@ import Projects from "./Projects"
 import Experience from "./Experience"
 import Contact from "./Contact"
 import Footer from "./Footer"
+import TypingAnimation from "./TypingAnimation"
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
             Gee Chai
           </h1>
           <h2 className="text-2xl text-gray-400 dark:text-gray-500 mb-6">
-            Frontend Developer
+            <TypingAnimation />
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-10">
             I build modern responsive web applications with Next.js, TypeScript,
