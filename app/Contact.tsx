@@ -9,9 +9,17 @@ export default function Contact() {
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      setErrorMessage("Please enter a valid email address.")
+      setStatus("error")
+      return
+    }
+
     setStatus("sending")
 
     try {
@@ -30,6 +38,7 @@ export default function Contact() {
         setStatus("error")
       }
     } catch {
+      setErrorMessage("Something went wrong. Please try again.")
       setStatus("error")
     }
   }
@@ -100,9 +109,7 @@ export default function Contact() {
             </p>
           )}
           {status === "error" && (
-            <p className="text-red-500 text-sm text-center">
-              Something went wrong. Please try again.
-            </p>
+            <p className="text-red-500 text-sm text-center">{errorMessage}</p>
           )}
         </form>
       </div>
