@@ -42,10 +42,10 @@ export default function Navbar() {
       : "text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
 
   return (
-    <nav className="fixed top-0 w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 z-50">
+    <nav className="fixed top-0 w-full bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-800 brutalist:bg-[#f5f0e8] brutalist:border-b-4 brutalist:border-black z-50">
       <div className="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <span className="font-bold text-gray-900 dark:text-white">
+          <span className="font-bold text-gray-900 dark:text-white brutalist:text-black brutalist:font-black brutalist:tracking-tight">
             Gee Chai
           </span>
           <ThemeToggle />
