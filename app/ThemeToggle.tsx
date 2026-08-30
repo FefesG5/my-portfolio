@@ -13,16 +13,26 @@ export default function ThemeToggle() {
 
   if (!mounted) return null
 
+  const cycleTheme = () => {
+    if (theme === "light") setTheme("dark")
+    else if (theme === "dark") setTheme("brutalist")
+    else setTheme("light")
+  }
+
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-      aria-label="Toggle dark mode"
+      onClick={cycleTheme}
+      className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+      aria-label="Toggle theme"
     >
-      {theme === "dark" ? (
+      {theme === "light" && (
         <i className="ti ti-sun" style={{ fontSize: "18px" }} />
-      ) : (
+      )}
+      {theme === "dark" && (
         <i className="ti ti-moon" style={{ fontSize: "18px" }} />
+      )}
+      {theme === "brutalist" && (
+        <i className="ti ti-layout-grid" style={{ fontSize: "18px" }} />
       )}
     </button>
   )
