@@ -32,7 +32,7 @@ export default function ThemeToggle() {
         <i className="ti ti-moon" style={{ fontSize: "18px" }} />
       )}
       {theme === "brutalist" && (
-        <i className="ti ti-layout-grid" style={{ fontSize: "18px" }} />
+        <i className="ti ti-circle-square" style={{ fontSize: "18px" }} />
       )}
     </button>
   )
