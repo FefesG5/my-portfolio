@@ -14,9 +14,17 @@ export default function ThemeToggle() {
   if (!mounted) return null
 
   const cycleTheme = () => {
-    if (theme === "light") setTheme("dark")
-    else if (theme === "dark") setTheme("brutalist")
-    else setTheme("light")
+    const next =
+      theme === "light" ? "dark" : theme === "dark" ? "brutalist" : "light"
+
+    if (!document.startViewTransition) {
+      setTheme(next)
+      return
+    }
+
+    document.startViewTransition(() => {
+      setTheme(next)
+    })
   }
 
   return (

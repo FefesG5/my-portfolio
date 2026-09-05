@@ -36,3 +36,29 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+::view-transition-old(root) {
+  animation: 800ms ease out fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 800ms ease in fade-in;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
