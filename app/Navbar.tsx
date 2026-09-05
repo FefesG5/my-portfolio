@@ -45,7 +45,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-800 brutalist:bg-[#f5f0e8] brutalist:border-b-4 brutalist:border-black z-50">
       <div className="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <span className="font-bold text-gray-900 dark:text-white brutalist:text-black brutalist:font-black brutalist:tracking-tight">
+          <span className="font-bold text-gray-900 dark:text-white brutalist:text-black brutalist:font-black brutalist:tracking-tight w-24 inline-block">
             Gee Chai
           </span>
           <ThemeToggle />
