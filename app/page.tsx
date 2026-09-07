@@ -32,13 +32,13 @@ export default function Home() {
           <div className="flex gap-4 justify-center">
             <a
               href="#projects"
-              className="bg-gray-900 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors brutalist:bg-black brutalist:rounded-none brutalist:border-2 brutalist:border-black brutalist:font-bold"
+              className="bg-gray-900 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors border-2 border-transparent brutalist:bg-black brutalist:rounded-none brutalist:border-black brutalist:font-bold"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors brutalist:border-2 brutalist:border-black brutalist:rounded-none brutalist:text-black brutalist:font-bold"
+              className="border-2 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors brutalist:border-black brutalist:rounded-none brutalist:text-black brutalist:font-bold"
             >
               Contact Me
             </a>
