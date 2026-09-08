@@ -38,8 +38,8 @@ export default function Navbar() {
 
   const linkClass = (section: string) =>
     section === activeSection
-      ? "text-gray-900 dark:text-white font-medium transition-colors"
-      : "text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+      ? "text-gray-900 dark:text-white font-medium transition-colors underline underline-offset-4 brutalist:text-black brutalist:font-black"
+      : "text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors brutalist:text-black"
 
   return (
     <nav className="fixed top-0 w-full bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-800 brutalist:bg-[#f5f0e8] brutalist:border-b-4 brutalist:border-black z-50">
