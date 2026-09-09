@@ -38,27 +38,18 @@ html {
 }
 
 ::view-transition-old(root) {
-  animation: 800ms ease out fade-out;
+  animation: none;
 }
 
 ::view-transition-new(root) {
-  animation: 800ms ease in fade-in;
+  animation: reveal 300ms ease-in;
 }
 
-@keyframes fade-out {
+@keyframes reveal {
   from {
-    opacity: 1;
+    clip-path: circle(0% at 95% 2%);
   }
   to {
-    opacity: 0;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+    clip-path: circle(150% at 95% 2%);
   }
 }
