@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@variant dark (&:where(.dark, .dark *));
-@variant brutalist (&:where(.brutalist, .brutalist *));
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant brutalist (&:where(.brutalist, .brutalist *));
 
 :root {
   --background: #ffffff;
