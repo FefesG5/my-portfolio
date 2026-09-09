@@ -32,7 +32,7 @@ export default function Home() {
           <div className="flex gap-4 justify-center">
             <a
               href="#projects"
-              className="bg-gray-900 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors border-2 border-transparent brutalist:bg-black brutalist:rounded-none brutalist:border-black brutalist:font-bold"
+              className="bg-gray-900 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors border-2 border-transparent dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200 brutalist:bg-black brutalist:rounded-none brutalist:border-black brutalist:font-bold"
             >
               View Projects
             </a>
