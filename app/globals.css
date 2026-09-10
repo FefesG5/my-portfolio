@@ -35,6 +35,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 ::view-transition-old(root) {
