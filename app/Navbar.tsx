@@ -1,11 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import ThemeToggle from "./ThemeToggle"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
+  const navRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const sections = [
@@ -36,13 +37,27 @@ export default function Navbar() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
+
   const linkClass = (section: string) =>
     section === activeSection
       ? "text-gray-900 dark:text-white font-medium transition-colors underline underline-offset-4 brutalist:text-black"
       : "text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium transition-colors brutalist:text-black"
 
   return (
-    <nav className="fixed top-0 w-full bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-800 brutalist:bg-[#f5f0e8] brutalist:border-b-4 brutalist:border-black z-50">
+    <nav
+      ref={navRef}
+      className="fixed top-0 w-full bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-800 brutalist:bg-[#f5f0e8] brutalist:border-b-4 brutalist:border-black z-50"
+    >
       <div className="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
           <span className="font-bold text-gray-900 dark:text-white brutalist:text-black brutalist:font-black brutalist:tracking-tight w-24 inline-block">
