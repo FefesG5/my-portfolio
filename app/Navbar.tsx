@@ -84,7 +84,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col px-6 pb-4 gap-4 text-sm">
+        <div className="md:hidden flex flex-col px-6 pb-4 gap-6">
           <a
             href="#hero"
             className={linkClass("hero")}
