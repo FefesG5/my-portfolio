@@ -39,6 +39,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      if (!isOpen) return
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
