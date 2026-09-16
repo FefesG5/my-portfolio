@@ -19,7 +19,7 @@ export default function Home() {
           <p className="text-gray-400 dark:text-gray-500 text-sm uppercase tracking-widest mb-4">
             Welcome to my portfolio
           </p>
-          <h1 className="text-6xl font-bold text-gray-900 dark:text-white brutalist:font-black brutalist:text-black brutalist:uppercase brutalist:tracking-tighter mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white brutalist:font-black brutalist:text-black brutalist:uppercase brutalist:tracking-tighter mb-4">
             Gee Chai
           </h1>
           <h2 className="text-2xl text-gray-400 dark:text-gray-500 mb-6">
