@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "welcome": "Welcome to my portfolio",
+    "name": "Gee Chai",
+    "description": "I build modern responsive web applications with Next.js, TypeScript, and Tailwind.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "heading": "About Me",
+    "paragraph1": "Hi, I'm Gee Chai — a Frontend Developer based in Japan passionate about building clean, fast, and user-friendly web applications.",
+    "paragraph2": "I specialize in Next.js, TypeScript, and Tailwind CSS. I enjoy turning complex problems into simple, beautiful interfaces that people love to use.",
+    "paragraph3": "When I'm not coding, I'm learning something new — either Japanese and the latest development in technology."
+  },
+  "skills": {
+    "heading": "Skills",
+    "subtitle": "Technologies I work with",
+    "frameworks": "Frameworks",
+    "languages": "Languages",
+    "tools": "Tools"
+  },
+  "projects": {
+    "heading": "Projects",
+    "viewOnGithub": "View on GitHub →",
+    "comingSoon": "Coming soon — something cool is in the works."
+  },
+  "experience": {
+    "heading": "Experience"
+  },
+  "contact": {
+    "heading": "Contact",
+    "subtitle": "Have a project in mind or just want to say hi? I'd love to hear from you.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again.",
+    "invalidEmail": "Please enter a valid email address."
+  },
+  "footer": {
+    "copyright": "© 2026 Gee Chai"
+  }
+}

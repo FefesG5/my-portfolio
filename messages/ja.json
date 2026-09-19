@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "自己紹介",
+    "skills": "スキル",
+    "projects": "プロジェクト",
+    "experience": "経験",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "welcome": "ポートフォリオへようこそ",
+    "name": "Gee Chai",
+    "description": "Next.js、TypeScript、Tailwindを使用して、モダンでレスポンシブなWebアプリケーションを構築しています。",
+    "viewProjects": "プロジェクトを見る",
+    "contactMe": "お問い合わせ"
+  },
+  "about": {
+    "heading": "自己紹介",
+    "paragraph1": "こんにちは、Gee Chaiです。日本を拠点に、クリーンで高速、そしてユーザーフレンドリーなWebアプリケーションの構築に情熱を注ぐフロントエンド開発者です。",
+    "paragraph2": "Next.js、TypeScript、Tailwind CSSを専門としています。複雑な問題をシンプルで美しいインターフェースに変えることが好きです。",
+    "paragraph3": "コーディング以外の時間は、日本語や最新の技術トレンドなど、常に新しいことを学んでいます。"
+  },
+  "skills": {
+    "heading": "スキル",
+    "subtitle": "使用している技術",
+    "frameworks": "フレームワーク",
+    "languages": "言語",
+    "tools": "ツール"
+  },
+  "projects": {
+    "heading": "プロジェクト",
+    "viewOnGithub": "GitHubで見る →",
+    "comingSoon": "近日公開予定 — 素晴らしいものを準備中です。"
+  },
+  "experience": {
+    "heading": "経験"
+  },
+  "contact": {
+    "heading": "お問い合わせ",
+    "subtitle": "プロジェクトのご相談や、お気軽にご連絡ください。",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "message": "メッセージ",
+    "namePlaceholder": "お名前を入力してください",
+    "emailPlaceholder": "メールアドレスを入力してください",
+    "messagePlaceholder": "メッセージを入力してください",
+    "send": "送信する",
+    "sending": "送信中...",
+    "success": "メッセージが送信されました！",
+    "error": "エラーが発生しました。もう一度お試しください。",
+    "invalidEmail": "有効なメールアドレスを入力してください。"
+  },
+  "footer": {
+    "copyright": "© 2026 Gee Chai"
+  }
+}
