@@ -1,7 +1,12 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
-import "./globals.css"
-import ThemeProvider from "./ThemeProvider"
+import "../globals.css"
+import ThemeProvider from "../ThemeProvider"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages } from "next-intl/server"
+import { hasLocale } from "next-intl"
+import { notFound } from "next/navigation"
+import { routing } from "@/i18n/routing"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,14 +24,28 @@ export const metadata: Metadata = {
     "Frontend Developer specializing in Next.js, TypeScript and Tailwind CSS",
 }
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode
-}>) {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
+  const messages = await getMessages()
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
@@ -37,7 +56,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>{children}</ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>{children}</ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )
