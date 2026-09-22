@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 
 export default function Contact() {
   const [name, setName] = useState("")
@@ -10,6 +11,7 @@ export default function Contact() {
     "idle" | "sending" | "success" | "error"
   >("idle")
   const [errorMessage, setErrorMessage] = useState("")
+  const t = useTranslations("contact")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -50,11 +52,10 @@ export default function Contact() {
     >
       <div className="max-w-3xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 brutalist:font-black brutalist:uppercase brutalist:text-black brutalist:border-b-4 brutalist:border-black brutalist:pb-2">
-          Contact
+          {t("heading")}
         </h2>
         <p className="text-gray-400 dark:text-gray-500 mb-8 brutalist:text-black">
-          Have a project in mind or just want to say hi? I'd love to hear from
-          you.
+          {t("subtitle")}
         </p>
         <form
           onSubmit={handleSubmit}
@@ -62,7 +63,7 @@ export default function Contact() {
         >
           <div className="flex flex-col gap-1">
             <label className="text-sm text-gray-500 dark:text-gray-400 brutalist:text-black brutalist:font-bold">
-              Name
+              {t("name")}
             </label>
             <input
               type="text"
@@ -75,7 +76,7 @@ export default function Contact() {
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-sm text-gray-500 dark:text-gray-400 brutalist:text-black brutalist:font-bold">
-              Email
+              {t("email")}
             </label>
             <input
               type="email"
@@ -88,7 +89,7 @@ export default function Contact() {
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-sm text-gray-500 dark:text-gray-400 brutalist:text-black brutalist:font-bold">
-              Message
+              {t("message")}
             </label>
             <textarea
               rows={5}
@@ -104,15 +105,13 @@ export default function Contact() {
             disabled={status === "sending"}
             className="bg-gray-900 dark:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors mt-2 disabled:opacity-50 brutalist:bg-black brutalist:rounded-none brutalist:border-2 brutalist:border-black brutalist:font-bold"
           >
-            {status === "sending" ? "Sending..." : "Send Message"}
+            {status === "sending" ? t("sending") : t("send")}
           </button>
           {status === "success" && (
-            <p className="text-green-600 text-sm text-center">
-              Message sent successfully!
-            </p>
+            <p className="text-green-600 text-sm text-center">{t("success")}</p>
           )}
           {status === "error" && (
-            <p className="text-red-500 text-sm text-center">{errorMessage}</p>
+            <p className="text-red-500 text-sm text-center">{t("error")}</p>
           )}
         </form>
       </div>
