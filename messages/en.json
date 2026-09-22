@@ -30,6 +30,7 @@
   "projects": {
     "heading": "Projects",
     "viewOnGithub": "View on GitHub →",
+    "portfolio": "A personal portfolio built with Next.js, TypeScript and Tailwind CSS.",
     "comingSoon": "Coming soon — something cool is in the works."
   },
   "experience": {
