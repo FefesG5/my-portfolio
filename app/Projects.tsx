@@ -1,20 +1,23 @@
+import { useTranslations } from "next-intl"
+
 const projects = [
   {
     title: "Portfolio Website",
-    description:
-      "A personal portfolio built with Next.js, TypeScript and Tailwind CSS.",
+    description: "portfolio",
     tech: ["Next.js", "TypeScript", "Tailwind"],
     link: "https://github.com/FefesG5/my-portfolio",
   },
   {
     title: "Project Two",
-    description: "Coming soon — something cool is in the works.",
+    description: "comingSoon",
     tech: ["Next", "TypeScript", "Tailwind"],
     link: "#",
   },
 ]
 
 export default function Projects() {
+  const t = useTranslations("projects")
+
   return (
     <section
       id="projects"
@@ -22,7 +25,7 @@ export default function Projects() {
     >
       <div className="max-w-3xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 brutalist:font-black brutalist:uppercase brutalist:text-black brutalist:border-b-4 brutalist:border-black brutalist:pb-2">
-          Projects
+          {t("heading")}
         </h2>
         <div className="flex flex-col gap-6">
           {projects.map((project) => (
@@ -34,15 +37,15 @@ export default function Projects() {
                 {project.title}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4 brutalist:text-black">
-                {project.description}
+                {t(project.description)}
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map((t) => (
+                {project.tech.map((tech) => (
                   <span
-                    key={t}
+                    key={tech}
                     className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs brutalist:bg-black brutalist:text-white brutalist:rounded-none"
                   >
-                    {t}
+                    {tech}
                   </span>
                 ))}
               </div>
@@ -53,7 +56,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors brutalist:text-black brutalist:font-bold brutalist:underline"
                 >
-                  View on GitHub →
+                  {t("viewOnGithub")}
                 </a>
               )}
             </div>
