@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 const experience = [
   {
     title: "Code Chrysalis: Coding Bootcamp in Tokyo",
@@ -12,14 +14,16 @@ const experience = [
 ]
 
 export default function Experience() {
+  const t = useTranslations("experience")
+
   return (
     <section
       id="experience"
       className="py-24 bg-white dark:bg-gray-900 brutalist:bg-[#f5f0e8]"
     >
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 brutalist:font-black brutalist:uppercase brutalist:text-black brutalist:border-b-4 brutalist:border-black brutalist:pb-2">
-          Experience
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 border-b-4 border-transparent pb-2 brutalist:font-black brutalist:uppercase brutalist:text-black brutalist:border-black">
+          {t("heading")}
         </h2>
         <div className="flex flex-col gap-10">
           {experience.map((job) => (
