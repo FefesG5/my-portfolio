@@ -10,14 +10,12 @@ export default function Contact() {
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle")
-  const [errorMessage, setErrorMessage] = useState("")
   const t = useTranslations("contact")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
-      setErrorMessage("Please enter a valid email address.")
       setStatus("error")
       return
     }
@@ -40,7 +38,6 @@ export default function Contact() {
         setStatus("error")
       }
     } catch {
-      setErrorMessage("Something went wrong. Please try again.")
       setStatus("error")
     }
   }
