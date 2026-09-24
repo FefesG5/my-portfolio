@@ -12,7 +12,7 @@ export default function ThemeProvider({
       attribute="class"
       defaultTheme="light"
       themes={["light", "dark", "brutalist"]}
-      disableTransitionOnChange
+      scriptProps={{ "data-cfasync": "false" }}
     >
       {children}
     </NextThemesProvider>
