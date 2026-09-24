@@ -2,11 +2,13 @@
 
 import { useState, useEffect, useRef } from "react"
 import ThemeToggle from "./ThemeToggle"
+import { useTranslations } from "next-intl"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("hero")
   const navRef = useRef<HTMLElement>(null)
+  const t = useTranslations("nav")
 
   useEffect(() => {
     const sections = [
@@ -70,22 +72,22 @@ export default function Navbar() {
         {/* Desktop links */}
         <div className="hidden md:flex gap-6 text-sm">
           <a href="#hero" className={linkClass("hero")}>
-            Home
+            {t("home")}
           </a>
           <a href="#about" className={linkClass("about")}>
-            About
+            {t("about")}
           </a>
           <a href="#skills" className={linkClass("skills")}>
-            Skills
+            {t("skills")}
           </a>
           <a href="#projects" className={linkClass("projects")}>
-            Projects
+            {t("projects")}
           </a>
           <a href="#experience" className={linkClass("experience")}>
-            Experience
+            {t("experience")}
           </a>
           <a href="#contact" className={linkClass("contact")}>
-            Contact
+            {t("contact")}
           </a>
         </div>
 
@@ -106,42 +108,42 @@ export default function Navbar() {
             className={linkClass("hero")}
             onClick={() => setIsOpen(false)}
           >
-            Home
+            {t("home")}
           </a>
           <a
             href="#about"
             className={linkClass("about")}
             onClick={() => setIsOpen(false)}
           >
-            About
+            {t("about")}
           </a>
           <a
             href="#skills"
             className={linkClass("skills")}
             onClick={() => setIsOpen(false)}
           >
-            Skills
+            {t("skills")}
           </a>
           <a
             href="#projects"
             className={linkClass("projects")}
             onClick={() => setIsOpen(false)}
           >
-            Projects
+            {t("projects")}
           </a>
           <a
             href="#experience"
             className={linkClass("experience")}
             onClick={() => setIsOpen(false)}
           >
-            Experience
+            {t("experience")}
           </a>
           <a
             href="#contact"
             className={linkClass("contact")}
             onClick={() => setIsOpen(false)}
           >
-            Contact
+            {t("contact")}
           </a>
         </div>
       )}
