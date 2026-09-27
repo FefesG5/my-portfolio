@@ -1,10 +1,12 @@
 "use client"
 
-import { useTheme } from "next-themes"
+import { useTheme } from "@wrksz/themes/client/use-theme"
+
+type AppTheme = "light" | "dark" | "brutalist"
 import { useEffect, useState } from "react"
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme<AppTheme>()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
