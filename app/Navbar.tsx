@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import ThemeToggle from "./ThemeToggle"
 import { useTranslations } from "next-intl"
-import LanguageToggle from "./LanguageToggle"
+import LanguageDropdown from "./LanguageDropdown"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -68,7 +68,7 @@ export default function Navbar() {
             Gee Chai
           </span>
           <ThemeToggle />
-          <LanguageToggle />
+          <LanguageDropdown />
         </div>
 
         {/* Desktop links */}
