@@ -3,10 +3,11 @@
 import { useRouter, usePathname } from "@/i18n/navigation"
 import { useLocale } from "next-intl"
 import { useState, useRef, useEffect } from "react"
+import Image from "next/image"
 
 const languages = [
-  { code: "en", label: "English" },
-  { code: "ja", label: "日本語" },
+  { code: "en", label: "English", flag: "gb" },
+  { code: "ja", label: "日本語", flag: "jp" },
 ]
 
 export default function LanguageDropdown() {
@@ -53,19 +54,25 @@ export default function LanguageDropdown() {
       {isOpen && (
         <div
           role="menu"
-          className="absolute top-8 right-0 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-lg shadow-md py-1 min-w-18 z-50 brutalist:bg-[#f5f0e8] brutalist:border-2 brutalist:border-black brutalist:rounded-none"
+          className="absolute top-8 right-0 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-lg shadow-md py-1 min-w-32 z-50 brutalist:bg-[#f5f0e8] brutalist:border-2 brutalist:border-black brutalist:rounded-none"
         >
           {languages.map((lang) => (
             <button
               key={lang.code}
               role="menuitem"
               onClick={() => switchLanguage(lang.code)}
-              className={`w-full text-left px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors brutalist:hover:bg-black brutalist:hover:text-white ${
+              className={`w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors brutalist:hover:bg-black brutalist:hover:text-white ${
                 locale === lang.code
                   ? "text-gray-900 dark:text-white font-medium brutalist:text-black"
                   : "text-gray-500 dark:text-gray-400 brutalist:text-black"
               }`}
             >
+              <Image
+                src={`https://flagcdn.com/${lang.flag}.svg`}
+                alt="Flag"
+                width={24}
+                height={16}
+              />
               {lang.label}
             </button>
           ))}
