@@ -54,7 +54,7 @@ export default function LanguageDropdown() {
       {isOpen && (
         <div
           role="menu"
-          className="absolute top-8 right-0 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-lg shadow-md py-1 min-w-32 z-50 brutalist:bg-[#f5f0e8] brutalist:border-2 brutalist:border-black brutalist:rounded-none"
+          className="absolute top-8 left-0 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-lg shadow-md py-1 min-w-32 z-50 brutalist:bg-[#f5f0e8] brutalist:border-2 brutalist:border-black brutalist:rounded-none"
         >
           {languages.map((lang) => (
             <button
