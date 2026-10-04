@@ -1,18 +1,5 @@
 import { useTranslations } from "next-intl"
 
-const experience = [
-  {
-    title: "Code Chrysalis: Coding Bootcamp in Tokyo",
-    company: "Code Chrysalis",
-    date: "2024 — 3 months",
-    bullets: [
-      "Completed an intensive full-time web development bootcamp",
-      "Built projects using HTML, CSS, JavaScript and React",
-      "Learned modern development workflows and best practices",
-    ],
-  },
-]
-
 export default function Experience() {
   const t = useTranslations("experience")
 
@@ -26,33 +13,32 @@ export default function Experience() {
           {t("heading")}
         </h2>
         <div className="flex flex-col gap-10">
-          {experience.map((job) => (
-            <div key={job.title}>
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white brutalist:font-black brutalist:text-black brutalist:uppercase">
-                    {job.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 brutalist:text-black">
-                    {job.company}
-                  </p>
-                </div>
-                <span className="text-sm text-gray-400 dark:text-gray-500 brutalist:text-black brutalist:font-bold">
-                  {job.date}
-                </span>
+          <div>
+            <div className="flex justify-between items-start mb-2">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white brutalist:font-black brutalist:text-black brutalist:uppercase">
+                  {t("bootcampTitle")}
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 brutalist:text-black">
+                  {t("bootcampCompany")}
+                </p>
               </div>
-              <ul className="list-disc list-inside flex flex-col gap-1">
-                {job.bullets.map((bullet) => (
-                  <li
-                    key={bullet}
-                    className="text-gray-600 dark:text-gray-300 brutalist:text-black"
-                  >
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
+              <span className="text-sm text-gray-400 dark:text-gray-500 brutalist:text-black brutalist:font-bold">
+                {t("bootcampDate")}
+              </span>
             </div>
-          ))}
+            <ul className="list-disc list-inside flex flex-col gap-1">
+              <li className="text-gray-600 dark:text-gray-300 brutalist:text-black">
+                {t("bootcampBullet1")}
+              </li>
+              <li className="text-gray-600 dark:text-gray-300 brutalist:text-black">
+                {t("bootcampBullet2")}
+              </li>
+              <li className="text-gray-600 dark:text-gray-300 brutalist:text-black">
+                {t("bootcampBullet3")}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
