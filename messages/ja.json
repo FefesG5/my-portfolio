@@ -31,6 +31,8 @@
     "heading": "プロジェクト",
     "viewOnGithub": "GitHubで見る →",
     "portfolio": "Next.js、TypeScript、Tailwind CSSで構築した個人ポートフォリオです。",
+    "portfolioTitle": "ポートフォリオサイト",
+    "projectTwoTitle": "プロジェクト2",
     "comingSoon": "近日公開予定 — 素晴らしいものを準備中です。"
   },
   "experience": {
