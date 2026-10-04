@@ -36,7 +36,13 @@
     "comingSoon": "Coming soon — something cool is in the works."
   },
   "experience": {
-    "heading": "Experience"
+    "heading": "Experience",
+    "bootcampTitle": "Code Chrysalis: Coding Bootcamp in Tokyo",
+    "bootcampCompany": "Code Chrysalis",
+    "bootcampDate": "2024 — 3 months",
+    "bootcampBullet1": "Completed an intensive full-time web development bootcamp",
+    "bootcampBullet2": "Built projects using HTML, CSS, JavaScript and React",
+    "bootcampBullet3": "Learned modern development workflows and best practices"
   },
   "contact": {
     "heading": "Contact",

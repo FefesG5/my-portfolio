@@ -36,7 +36,13 @@
     "comingSoon": "近日公開予定 — 素晴らしいものを準備中です。"
   },
   "experience": {
-    "heading": "経験"
+    "heading": "経験",
+    "bootcampTitle": "Code Chrysalis: 東京のコーディングブートキャンプ",
+    "bootcampCompany": "Code Chrysalis",
+    "bootcampDate": "2024年 — 3ヶ月",
+    "bootcampBullet1": "集中的なフルタイムのWeb開発ブートキャンプを修了",
+    "bootcampBullet2": "HTML、CSS、JavaScript、Reactを使用したプロジェクトを構築",
+    "bootcampBullet3": "モダンな開発ワークフローとベストプラクティスを習得"
   },
   "contact": {
     "heading": "お問い合わせ",
