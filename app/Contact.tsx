@@ -64,7 +64,7 @@ export default function Contact() {
             </label>
             <input
               type="text"
-              placeholder="Your Name"
+              placeholder={t("namePlaceholder")}
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -77,7 +77,7 @@ export default function Contact() {
             </label>
             <input
               type="email"
-              placeholder="Your Email"
+              placeholder={t("emailPlaceholder")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -90,7 +90,7 @@ export default function Contact() {
             </label>
             <textarea
               rows={5}
-              placeholder="Your Message"
+              placeholder={t("messagePlaceholder")}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
