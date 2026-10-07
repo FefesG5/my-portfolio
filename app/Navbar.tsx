@@ -94,6 +94,7 @@ export default function Navbar() {
         <button
           className="md:hidden text-gray-500 dark:text-gray-200"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
           {isOpen ? "✕" : "☰"}
         </button>
