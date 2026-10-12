@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "format": "npx prettier --write ."
+    "fix": "npx prettier --write .",
+    "test": "playwright test",
+    "ui": "playwright test --ui"
   },
   "dependencies": {
     "@wrksz/themes": "^2.0.2",
